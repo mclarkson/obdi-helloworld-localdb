@@ -47,7 +47,5 @@ $ curl -k -X DELETE \
   https://$ipport/api/nomen.nescio/$guid/helloworld-localdb/helloworld-localdb/1?env_id=1
 ```
 
-The job and its output can also be viewed using the System Jobs viewer.
-
 See [obdi-dev-repository](https://github.com/mclarkson/obdi-dev-repository)
 for more information about Dev plugins.
