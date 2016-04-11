@@ -137,8 +137,8 @@
               <td class="white" style="white-space: nowrap">
 		<input id="name" ng-model="newitem.Text" ng-trim="false"
 		placeholder="Type text to add here" type="text" size=50>
-                <a href="#" ng-click="AddItem()">
-                  <i class="fa fa-plus-circle green" title="Add Item"></i>
+                <button type="button" class="btn btn-default btn-sm" ng-click="AddItem()">
+                  <i class="fa fa-plus-circle green></i>Add Item
                 </a>
               </td>
               <td class="white" style="white-space: pre-wrap;width: 100%;">{{GetDescriptionChooser(mapconfig.newclass)}}</td>
