@@ -1,53 +1,46 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Obdi-helloworld-localdb by mclarkson</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Obdi-helloworld-localdb</h1>
-      <h2 class="project-tagline">Demonstrates using a private sqlite3 database.</h2>
-      <a href="https://github.com/mclarkson/obdi-helloworld-localdb" class="btn">View on GitHub</a>
-      <a href="https://github.com/mclarkson/obdi-helloworld-localdb/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/mclarkson/obdi-helloworld-localdb/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
-
-    <section class="main-content">
-      <h1>
-<a id="obdi-helloworld-localdb" class="anchor" href="#obdi-helloworld-localdb" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>obdi-helloworld-localdb</h1>
-
-<p>This Obdi plugin has a UI and a private sqlite3 database.</p>
-
-<h2>
-<a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Screenshot</h2>
-
-<p><img src="images/helloworld-localdb.png?raw=true" alt=""></p>
-
-<h2>
-<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is it?</h2>
-
-<p>A starting point for writing an Obdi plugin that uses a private sqlite3 database.</p>
-
-<ul>
-<li>This plugin has a Web Interface.</li>
-<li>This plugin uses a private sqlite database.</li>
-<li>This plugin exposes a REST endpoint.
-The GUI uses REST to access the private database.</li>
-<li>This plugin does not run scripts on workers.</li>
-</ul>
-
-<p>Similar plugin: <a href="https://github.com/mclarkson/obdi-saltregexmanager">obdi-saltregexmanager</a></p>
-
-<h2>
-<a id="using-the-rest-endpoint-for-crud-from-the-command-line" class="anchor" href="#using-the-rest-endpoint-for-crud-from-the-command-line" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using the REST Endpoint for CRUD from the Command Line</h2>
-
-<pre><code># Log in
+<head>
+  <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.1.25">
+  <meta charset="UTF-8">
+  <title>Obdi-helloworld-localdb by mclarkson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+</head>
+<body>
+  <section class="page-header">
+    <h1 class="project-name">Obdi-helloworld-localdb</h1>
+    <h2 class="project-tagline">Demonstrates using a private sqlite3 database.</h2>
+    <a href= "https://github.com/mclarkson/obdi-helloworld-localdb" class="btn">View on GitHub</a>
+    <a href="http://dev.obdi.io" class="btn">Parent Repository</a>
+    <a href="http://obdi.io" class="btn">Obdi Home Page</a>
+    <!--
+    <a href= "https://github.com/mclarkson/obdi-helloworld-localdb/zipball/master" class="btn">Download .zip</a>
+    <a href= "https://github.com/mclarkson/obdi-helloworld-localdb/tarball/master" class="btn">Download .tar.gz</a>
+    -->
+  </section>
+  <section class="main-content">
+    <h1><a id="obdi-helloworld-localdb" class="anchor" href="#obdi-helloworld-localdb" aria-hidden=
+    "true"></a>obdi-helloworld-localdb</h1>
+    <p>This Obdi plugin has a UI and a private sqlite3 database.</p>
+    <h2><a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"></a>Screenshot</h2>
+    <p><img src="images/helloworld-localdb.png?raw=true" alt=""></p>
+    <h2><a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"></a>What is it?</h2>
+    <p>A starting point for writing an Obdi plugin that uses a private sqlite3 database.</p>
+    <ul>
+      <li>This plugin has a Web Interface.</li>
+      <li>This plugin uses a private sqlite database.</li>
+      <li>This plugin exposes a REST endpoint. The GUI uses REST to access the private database.</li>
+      <li>This plugin does not run scripts on workers.</li>
+    </ul>
+    <p>Similar plugin: <a href="https://github.com/mclarkson/obdi-saltregexmanager">obdi-saltregexmanager</a></p>
+    <h2><a id="using-the-rest-endpoint-for-crud-from-the-command-line" class="anchor" href=
+    "#using-the-rest-endpoint-for-crud-from-the-command-line" aria-hidden="true"></a>Using the REST Endpoint for CRUD
+    from the Command Line</h2>
+    <pre><code># Log in
 
 $ ipport="127.0.0.1:443"
 
@@ -73,18 +66,16 @@ $ curl -k -d '{"Id":1,"Text":"Hello there"}' -X PUT \
 $ curl -k -X DELETE \
   https://$ipport/api/nomen.nescio/$guid/helloworld-localdb/helloworld-localdb/1?env_id=1
 </code></pre>
-
-<p>See <a href="https://github.com/mclarkson/obdi-dev-repository">obdi-dev-repository</a>
-for more information about Dev plugins.</p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/mclarkson/obdi-helloworld-localdb">Obdi-helloworld-localdb</a> is maintained by <a href="https://github.com/mclarkson">mclarkson</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+    <p>See <a href="https://github.com/mclarkson/obdi-dev-repository">obdi-dev-repository</a> for more information
+    about Dev plugins.</p>
+    <footer class="site-footer">
+      <span class="site-footer-owner"><a href=
+      "https://github.com/mclarkson/obdi-helloworld-localdb">Obdi-helloworld-localdb</a> is maintained by <a href=
+      "https://github.com/mclarkson">mclarkson</a>.</span> <span class="site-footer-credits">This page was generated by
+      <a href="https://pages.github.com">GitHub Pages</a> using the <a href=
+      "https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason
+      Long</a>.</span>
+    </footer>
+  </section>
+</body>
 </html>
