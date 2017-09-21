@@ -130,19 +130,20 @@
             </tr>
           </table>
         </div>
-        <table class="table table-bordered" style="width:100%;overflow:auto">
-          <tbody>
-            <tr>
-              <!-- <td style="width:200px"> -->
-              <td class="white" style="white-space: nowrap">
-		<input id="name" ng-model="newitem.Text" ng-trim="false"
-		placeholder="Type text to add here" type="text" size=50>
-                <button type="button" class="btn btn-default btn-sm" ng-click="AddItem()">
-                  <i class="fa fa-plus-circle"></i> Add Item
-                </button>
-              </td>
-              <td class="white" style="white-space: pre-wrap;width: 100%;">{{GetDescriptionChooser(mapconfig.newclass)}}</td>
-            </tr>
+        <div>
+          <table class="table table-bordered" style="width:100%;overflow:auto">
+            <tbody>
+              <tr>
+                <!-- <td style="width:200px"> -->
+                <td class="white" style="white-space: nowrap">
+                  <input id="name" ng-model="newitem.Text" ng-trim="false"
+                    placeholder="Type text to add here" type="text" size=50>
+                  <button type="button" class="btn btn-default btn-sm" ng-click="AddItem()">
+                    <i class="fa fa-plus-circle"></i> Add Item
+                  </button>
+                </td>
+                <td class="white" style="white-space: pre-wrap;width: 100%;">{{GetDescriptionChooser(mapconfig.newclass)}}</td>
+              </tr>
             </tbody>
           </table>
         </div> <!-- table-responsive -->

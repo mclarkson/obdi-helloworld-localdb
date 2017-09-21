@@ -262,7 +262,6 @@ mgrApp.controller("helloWorldLocaldb", function ($scope,$http,$uibModal,$log,
 
     $http({
       method: 'DELETE',
-      data: {Id:0,Text:$scope.newitem.Text},
       url: baseUrl + "/" + $scope.login.userid + "/" + $scope.login.guid
            + "/helloworld-localdb/helloworld-localdb/" + id
            + "?env_id=" + $scope.env.Id
