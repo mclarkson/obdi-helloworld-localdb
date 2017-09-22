@@ -9,7 +9,6 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	"io/ioutil"
 	"log"
-	"log/syslog"
 	"net"
 	"net/http"
 	"strconv"
