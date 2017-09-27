@@ -71,3 +71,7 @@ curl -k -d '{
 rm -f -- "$t"
 trap - EXIT
 
+# Now force all the golang plugins to compile...
+
+curl -k "$proto://$ipport/api/admin/$guid/helloworld-localdb/helloworld-localdb"
+
